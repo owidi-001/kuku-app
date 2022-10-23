@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">kuku</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <!--  Tabbed navigations  -->
+    <string name="tab_all">All</string>
+    <string name="tab_eggs">Eggs</string>
+    <string name="tab_chicks">Chick</string>
+    <string name="tab_layers">Layers</string>
+    <string name="tab_broilers">Broilers</string>
+
+    <!--  Dummy text  -->
+    <string name="dummy">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est fuga molestias optio perferendis quasi quidem vitae. Quidem, repellendus voluptatibus! Autem dolores enim eveniet facilis hic maiores minus unde ut voluptates?</string>
+</resources>
