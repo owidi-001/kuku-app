@@ -14,7 +14,7 @@ public class DashboardViewModel extends ViewModel {
 
     public DashboardViewModel() {
         lessons = new MutableLiveData<>();
-        ArrayList<Lesson> data = new ArrayList<>();
+        ArrayList<Lesson> data = new ArrayList<Lesson>();
 
         data.add(new Lesson("Breeds of Chicken", "https://webstockreview.net/images/clipart-png-chicken.png", "https://webstockreview.net/images/clipart-png-chicken.png"));
         data.add(new Lesson("Chicken Health", "https://webstockreview.net/images/clipart-png-chicken.png", "https://webstockreview.net/images/clipart-png-chicken.png"));

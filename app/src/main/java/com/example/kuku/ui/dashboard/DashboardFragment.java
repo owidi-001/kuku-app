@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+//import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -31,11 +32,14 @@ public class DashboardFragment extends Fragment {
         LessonAdaptor lessonAdaptor=new LessonAdaptor(getContext());
 
         dashboardViewModel.getData().observe(getViewLifecycleOwner(), lessonAdaptor::setLessons);
+        recyclerView.setAdapter(lessonAdaptor);
 
-        System.out.println(dashboardViewModel.getData().toString());
 
         recyclerView.setLayoutManager(new GridLayoutManager(root.getContext(), 1,
         GridLayoutManager.VERTICAL,false));
+
+//        recyclerView.addItemDecoration(new DividerItemDecoration(getContext(),
+//                DividerItemDecoration.VERTICAL));
 
         return root;
     }

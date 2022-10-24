@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/listTile"
     android:layout_width="match_parent"
-    android:layout_height="?android:attr/listPreferredItemHeightLarge"
-    android:background="@color/light">
+    android:layout_height="wrap_content"
+    android:background="@color/light"
+    android:orientation="horizontal"
+    android:layout_marginTop="4dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:background="@color/primary"
-        >
         <ImageView
             android:id="@+id/lessonIcon"
             android:layout_width="wrap_content"
@@ -19,10 +15,6 @@
             android:layout_marginEnd="@dimen/activity_horizontal_margin"
             />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            >
             <TextView
                 android:id="@+id/lessonTitle"
                 android:layout_width="wrap_content"
@@ -30,29 +22,17 @@
                 android:gravity="center_vertical"
                 android:textSize="16sp"/>
 
-            <TextView
-                android:id="@+id/lessonUrl"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="center_vertical"
-                android:textSize="16sp"/>
-        </LinearLayout>
-
-
         <Space
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="5" />
 
         <Button
-            android:layout_width="match_parent"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:text="@string/read"
             android:background="@drawable/rounded_button"
-            android:textColor="@color/white"
+            android:textColor="@color/white" />
 
-            />
-    </LinearLayout>
-
-</RelativeLayout>
+</LinearLayout>

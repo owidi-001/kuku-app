@@ -1,16 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.dashboard.DashboardFragment">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/lessonView"
+    <LinearLayout
+        android:id="@+id/scaffold"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="1dp"
-        android:background="@color/primary"/>
+        android:background="@color/white"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="@string/lessons_label"
+            android:textColor="@color/primary"
+            android:layout_margin="10dp"
+            android:textSize="16sp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/lessonView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:padding="10dp"
+            android:background="@color/primary"
+            android:clipToPadding="false"
+            />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
