@@ -16,6 +16,8 @@
         android:background="@color/primary"
         >
 
+
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/itemList"
             android:layout_width="match_parent"
