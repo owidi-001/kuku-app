@@ -4,12 +4,14 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.kuku.R;
 import com.example.kuku.databinding.FragmentDashboardBinding;
 
 public class DashboardFragment extends Fragment {
@@ -24,8 +26,17 @@ public class DashboardFragment extends Fragment {
         binding = FragmentDashboardBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textDashboard;
-        dashboardViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        RecyclerView recyclerView=root.findViewById(R.id.lessonView);
+
+        LessonAdaptor lessonAdaptor=new LessonAdaptor(getContext());
+
+        dashboardViewModel.getData().observe(getViewLifecycleOwner(), lessonAdaptor::setLessons);
+
+        System.out.println(dashboardViewModel.getData().toString());
+
+        recyclerView.setLayoutManager(new GridLayoutManager(root.getContext(), 1,
+        GridLayoutManager.VERTICAL,false));
+
         return root;
     }
 

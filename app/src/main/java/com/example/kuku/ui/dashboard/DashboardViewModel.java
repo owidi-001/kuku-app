@@ -4,16 +4,27 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
+import com.example.kuku.models.Lesson;
+
+import java.util.ArrayList;
+
 public class DashboardViewModel extends ViewModel {
 
-    private final MutableLiveData<String> mText;
+    private final MutableLiveData<ArrayList<Lesson>> lessons;
 
     public DashboardViewModel() {
-        mText = new MutableLiveData<>();
-        mText.setValue("This is dashboard fragment");
+        lessons = new MutableLiveData<>();
+        ArrayList<Lesson> data = new ArrayList<>();
+
+        data.add(new Lesson("Breeds of Chicken", "https://webstockreview.net/images/clipart-png-chicken.png", "https://webstockreview.net/images/clipart-png-chicken.png"));
+        data.add(new Lesson("Chicken Health", "https://webstockreview.net/images/clipart-png-chicken.png", "https://webstockreview.net/images/clipart-png-chicken.png"));
+        data.add(new Lesson("Feeding Chicken", "https://webstockreview.net/images/clipart-png-chicken.png", "https://webstockreview.net/images/clipart-png-chicken.png"));
+        data.add(new Lesson("Housing for Chicken", "https://webstockreview.net/images/clipart-png-chicken.png", "https://webstockreview.net/images/clipart-png-chicken.png"));
+
+        lessons.setValue(data);
     }
 
-    public LiveData<String> getText() {
-        return mText;
+    LiveData<ArrayList<Lesson>> getData(){
+        return lessons;
     }
 }

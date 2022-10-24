@@ -10,7 +10,6 @@ import java.util.ArrayList;
 
 public class HomeViewModel extends ViewModel {
 
-//    private final MutableLiveData<String> mText;
     private final MutableLiveData<ArrayList<Item>> items;
 
     public HomeViewModel() {
