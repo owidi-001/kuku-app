@@ -17,14 +17,14 @@ public class HomeViewModel extends ViewModel {
         items = new MutableLiveData<>();
         ArrayList<Item> data = new ArrayList<Item>();
 
-        data.add(new Item("Kuroiler","Layers","http://pngimg.com/download/2146",800));
-        data.add(new Item("Kienyeji","Breeder","http://pngimg.com/download/2146",800));
-        data.add(new Item("High Breed","Layers","http://pngimg.com/download/2146",700));
-        data.add(new Item("Americano","Layers","http://pngimg.com/download/2146",1000));
-        data.add(new Item("Kuroiler","Broilers","http://pngimg.com/download/2146",800));
-        data.add(new Item("Kienyeji","Layers","http://pngimg.com/download/2146",500));
-        data.add(new Item("High Breed","eggs","http://pngimg.com/download/2146",20));
-        data.add(new Item("Americano","chicks","http://pngimg.com/download/2146",120));
+        data.add(new Item("Kuroiler","Layers","https://pngimg.com/uploads/chicken/chicken_PNG2146.png",800));
+        data.add(new Item("Kienyeji","Breeder","https://pngimg.com/uploads/chicken/chicken_PNG2164.png",800));
+        data.add(new Item("High Breed","Layers","https://pngimg.com/uploads/chicken/chicken_PNG2146.png",700));
+        data.add(new Item("Americano","Layers","https://pngimg.com/uploads/chicken/chicken_PNG2146.png",1000));
+        data.add(new Item("Kuroiler","Broilers","https://pngimg.com/uploads/chicken/chicken_PNG2146.png",800));
+        data.add(new Item("Kienyeji","Layers","https://pngimg.com/uploads/chicken/chicken_PNG2146.png",500));
+        data.add(new Item("High Breed","eggs","https://pngimg.com/uploads/chicken/chicken_PNG2146.png",20));
+        data.add(new Item("Americano","chicks","https://pngimg.com/uploads/chicken/chicken_PNG2146.png",120));
 
         items.setValue(data);
     }
