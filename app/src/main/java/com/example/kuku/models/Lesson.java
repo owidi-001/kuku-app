@@ -1,11 +1,13 @@
 package com.example.kuku.models;
 
+import android.graphics.drawable.Drawable;
+
 public class Lesson {
     private String title;
-    private String icon;
+    private Drawable icon;
     private String url;
 
-    public Lesson(String title, String icon, String url) {
+    public Lesson(String title, Drawable icon, String url) {
         this.title = title;
         this.icon = icon;
         this.url = url;
@@ -19,11 +21,11 @@ public class Lesson {
         this.title = title;
     }
 
-    public String getIcon() {
+    public Drawable getIcon() {
         return icon;
     }
 
-    public void setIcon(String icon) {
+    public void setIcon(Drawable icon) {
         this.icon = icon;
     }
 

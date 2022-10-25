@@ -38,11 +38,12 @@ public class DashboardFragment extends Fragment {
         recyclerView.setLayoutManager(new GridLayoutManager(root.getContext(), 1,
         GridLayoutManager.VERTICAL,false));
 
-//        recyclerView.addItemDecoration(new DividerItemDecoration(getContext(),
-//                DividerItemDecoration.VERTICAL));
-
         return root;
     }
+
+
+
+
 
     @Override
     public void onDestroyView() {

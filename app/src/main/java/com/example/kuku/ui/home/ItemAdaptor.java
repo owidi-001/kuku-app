@@ -5,8 +5,10 @@ import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -61,11 +63,19 @@ public class ItemAdaptor extends RecyclerView.Adapter<ItemAdaptor.ViewHolder> {
             txtType =itemView.findViewById(R.id.type);
             txtPrice=itemView.findViewById(R.id.price);
             itemImage = itemView.findViewById(R.id.image);
+
+            // Button click handles
+            Button button = itemView.findViewById(R.id.card_btn);
+            button.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    Toast.makeText(v.getContext(), txtBreed.getText() +" added to your basket",Toast.LENGTH_LONG).show();
+                }
+            });
+
         }
     }
 
     public void setItems(ArrayList<Item> items) {
         this.data = items;
-        notifyDataSetChanged();
     }
 }
